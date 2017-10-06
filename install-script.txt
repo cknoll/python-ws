@@ -1,0 +1,15 @@
+# paste these commands in your terminal line by line
+# use CTRL-SHIFT-V
+
+# download the installer
+wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
+
+bash ./miniconda.sh -b # execute it in batch mode
+
+# add miniconda3 to system path
+echo "export PATH=\"$HOME/miniconda3/bin:\$PATH\"" >> ~/.bashrc
+
+# install important packages via conda
+conda install --yes ipython jupyter sympy numpy scipy matplotlib
+# install IDE (spyder) and personal debug-helper
+pip install spyder ipydex
