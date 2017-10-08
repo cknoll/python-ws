@@ -6,7 +6,8 @@ wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O mi
 
 bash ./miniconda.sh -b # execute it in batch mode
 
-# add miniconda3 to system path
+# add miniconda3 to system path (now and permanently via .bashrc)
+export PATH="$HOME/miniconda3/bin:$PATH"
 echo "export PATH=\"$HOME/miniconda3/bin:\$PATH\"" >> ~/.bashrc
 
 # install important packages via conda
